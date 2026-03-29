@@ -161,8 +161,6 @@ spec:
         hostPath:
           path: /optscale/etcd
           type: DirectoryOrCreate
-      nodeSelector:
-        node-role.kubernetes.io/control-plane:
 {{- end }}
 ---
 apiVersion: v1
@@ -192,7 +190,7 @@ spec:
     spec:
       containers:
       - name: configurator
-        image: configurator:local
+        image: hystax/configurator:2026030201-public
         volumeMounts:
         - name: config-volume
           mountPath: /config
@@ -217,6 +215,4 @@ spec:
       - name: config-volume
         configMap:
           name: optscale-etcd
-      nodeSelector:
-        node-role.kubernetes.io/control-plane:
   backoffLimit: 10

@@ -151,10 +151,10 @@ class Runkube:
     def _pull_image(self, ctrd_cl, image_name, tag, auth_config):
         full_image_name = os.path.join(self.dregistry, image_name)
         LOG.info("Pulling image %s with tag %s", full_image_name, tag)
-        image_ref = '{}:{}'.format(full_image_name, tag)
-        ctrd_cl.image.pull(image_ref)
-        LOG.debug("Pulled image %s", image_ref)
-        return image_ref
+        ctrd_cl.image.pull('{}:{}'.format(full_image_name, tag))
+        image = ctrd_cl.image.inspect('{}:{}'.format(full_image_name, tag)).id
+        LOG.debug("Pulled image with id %s", image)
+        return image
 
     def pull_images(self, ctrd_cl):
         LOG.debug("Logging into container registry %s", self.dregistry)

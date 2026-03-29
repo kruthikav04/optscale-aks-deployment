@@ -10,10 +10,10 @@ service_credentials:
     access_key_id: accesskeyid
     secret_access_key: secretaccesskey
   azure:
-    client_id: clientid
-    tenant: tenant
-    secret: secret
-    subscription_id: subscriptionid
+    client_id: "<APP_ID>"
+    tenant: "<TENANT_ID>"
+    secret: "<CLIENT_SECRET>"
+    subscription_id: "442c2f42-962b-4a21-bea5-db44a51fb466"
   alibaba:
     access_key_id: accesskeyid
     secret_access_key: secretaccesskey
@@ -45,7 +45,8 @@ service_credentials:
     project_id: yourprojectid
 
 #  encryption salt for encode user information
-encryption_salt: my~encypt10n~s@lt
+encryption_salt: "random-salt"
+encryption_key: "random-key"
 
 # SMTP server and credentials used for sending emails
 smtp:

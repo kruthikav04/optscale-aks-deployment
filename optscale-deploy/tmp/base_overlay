@@ -1,0 +1,243 @@
+auth:
+  image:
+    id: sha256:510da78d587408b35424169840162b4c51c1f08c84566d38596961b2ebe256ee
+bailiff:
+  image:
+    id: sha256:a37a4ca64fc56b41f33c65d187d79fb897a958ab5f6560edfaabd9f9920d1483
+bi_exporter:
+  image:
+    id: sha256:7ebb43bb1dc1f95b8c9204a1b9ea5c1f39dfc51859e73a793445ac1ec8348fb5
+bi_scheduler:
+  image:
+    id: sha256:b1ec11b004f05ffefd9aa0cba0d5d185878523a70a96a129f9e3b3d3f98853c0
+booking_observer:
+  image:
+    id: sha256:ed40862fe7bdcbacd6ba69e7e42e89a63c2636239d4f6b9ccb50a3d54a3b8ff3
+bumischeduler:
+  image:
+    id: sha256:b74a46cc93468e4fc4193b499ab4181f48e3497c2da9df86dc96a3ac7d486124
+bumiworker:
+  image:
+    id: sha256:be858d120513375a98557ef261c7e0977209864306c2d8254adba95daa36a2f0
+calendar_observer:
+  image:
+    id: sha256:2f29203a3a506dbf916aa95fa6a30dfa8a29f3fce400835751b19af14d42a995
+certificates:
+  optscale: !!binary |
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURPVENDQWlHZ0F3SUJBZ0lVYVJjK3JwU1Fl
+    a01yZ3RSdlRmMVd3ZWRtOEZBd0RRWUpLb1pJaHZjTkFRRUwKQlFBd0xERVhNQlVHQTFVRUF3d09i
+    M0IwYzJOaGJHVXViRzlqWVd3eEVUQVBCZ05WQkFvTUNHOXdkSE5qWVd4bApNQjRYRFRJMk1ETXlO
+    akE1TkRZeE9Wb1hEVEkzTURNeU5qQTVORFl4T1Zvd0xERVhNQlVHQTFVRUF3d09iM0IwCmMyTmhi
+    R1V1Ykc5allXd3hFVEFQQmdOVkJBb01DRzl3ZEhOallXeGxNSUlCSWpBTkJna3Foa2lHOXcwQkFR
+    RUYKQUFPQ0FROEFNSUlCQ2dLQ0FRRUFvbGYrZEtkNGZqRlF4QjlPUXhRcmJFWXFTdWNIbVJoaHZN
+    TEFqOTREQ3FYYgpxamNGTW5pM0I3M1R6d1dMT2lHZnZSMlFhWVh4Y3BmTnJMcnA2MXMxbmljSEVp
+    UGVzVnMwSkx6SVcvVmJPS1diCjVVdjBhUTVCWHNnd0tlU28wazZhSGNBWEZBNVY3c0pUb1RqR3JW
+    Uk8rRllrQ2Q4N0V1bTNEK3RRMEY4REZOcHIKUC9FOGFvUGExV3pSS25lclY4aHB6RHhpNWttNnl6
+    VytYbk83YlFnWXhta1FPcWl1cGFlL2NIaER6VjQrNlRUVgo5NkxLMkhObnZDWmVJamNpSlJlNUlM
+    MmxDSEV4WDdobGxlS0NFUGlCa25hblZqT3Y3bVlYK2RUQk04QUpKQUVLCml4WlBoVm5vNXQ5MXFV
+    bFZaU1lSMndMeFBBZ0RTaWw3dEVMeUk1ZUpaUUlEQVFBQm8xTXdVVEFkQmdOVkhRNEUKRmdRVURs
+    OUN2OE5yZWkreExPMlk2KzhCVjVhemIyUXdId1lEVlIwakJCZ3dGb0FVRGw5Q3Y4TnJlaSt4TE8y
+    WQo2KzhCVjVhemIyUXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QU5CZ2txaGtpRzl3MEJBUXNGQUFP
+    Q0FRRUFoVTlXCmdTaVh6cWlwaE0yRExLVEN4aU9SNFEyRlNqaXo1cXozakpkMkVnRFJBM2duUWxZ
+    Ym94ekswZjhwdXJ3T2F5cXkKZEZQVXlaU0tNSTdNZUd5Ykt2dnp2QlR4anNoUWZuSWR1bExvUUdU
+    N29TejdPT2MwenFDaTR3OWNzV2ZiQm84UwptektzaldGay9OdGtlVmY0UmNLUEZKZEcxOUl4ZmMr
+    a3RKSDZ2MW9tMHlnUml1QXVNZ0FNdklwUi93MExLVjlQCk9OWHBkcWVmT3BaTVpSMHY1WG1DVWFt
+    ZGE0dG1qV2p1OFJ1bzR1TVRleU0vdEZkZXFocXZWdFJYVGtKRjZLc0EKWHZEUUZTaXd3VUd0T3Y1
+    MEdyYnUraFNuRnIzQk9sWXZyaGpNWXBjdGNHV1JJdlpaYkpIckpRSklWZXd0YmJUagovWUhDTk1l
+    WUpJQlQ3YWtBU1E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+cleanelkdb:
+  image:
+    id: sha256:ac7a110a16e2a742097ca8265540f0b01e82d1c98127b9c75f3b51f9a3a8eb9b
+cleaninfluxdb:
+  image:
+    id: sha256:f001aa457cde0e9b08503909a9a491ba486b0a528d11ba03c9866d56f025f4fc
+cleanmongodb:
+  image:
+    id: sha256:526600adbeb37fae2a33e9beba712363b55bf16fcb5257ea7f2c77f19afc5458
+configurator:
+  image:
+    id: sha256:041db66844451446b4de5af61294ddcf199df5052938c264b84704c7da3921d4
+demo_org_cleanup:
+  image:
+    id: sha256:3c01e35e10e5f468e92c4dee474550883f7770fa1eeadc1b00058330b2827e77
+diproxy:
+  image:
+    id: sha256:951a9d13f1317b34e7b3dced5d4c128fe4bbfea4d9bed82278ad6f95fea115ec
+diworker:
+  image:
+    id: sha256:8e0fee378cac40eec67071a4bff5008253d5e1e3dacbed222eaf502772465c50
+docker_registry: index.docker.io/hystax
+elk:
+  enabled: true
+error_pages:
+  image:
+    id: sha256:5442cd2dea1b78e435c7f3586e719ca7c793af1a1c0bdc3310d14739a0ae321c
+etcd:
+  image:
+    id: sha256:bae720dfb6289a99460a3f7c0d0445d86b4d616c595ebcdad479572c0eddc2ce
+failed_imports_dataset_generator:
+  image:
+    id: sha256:d246be0390be2507a9a6d8b5c173c43d0298dbc781ec61fdfde89217e0f6cc7e
+filebeat:
+  image:
+    id: sha256:3a3b03da137cd35ac1ccdb86b5a96ba929d6740e39dc6271809787b461bcdd3a
+gemini_scheduler:
+  image:
+    id: sha256:786e8436757ad6fb59cead9e1593f4ca11d851a7c55779d4597bf25ef483eccc
+gemini_worker:
+  image:
+    id: sha256:23e38b86b8e4ba6b1c38966444da7e6891bb195e7b267919c6715e6374699b68
+grafana:
+  image:
+    id: sha256:2001b83c6a8c7f011c94df37a63bc00923a1c23a81ebe3f400363d4dc725ca29
+grafana_nginx:
+  image:
+    id: sha256:8348b926750e0e6bcf8b8cb82b1c24fdaed6e1d86bce0de46d1a4f5a5c7c33ec
+herald:
+  image:
+    id: sha256:eaa28842450403a9924457de552249374cf573468b60a91babcbe6a6850b65a9
+herald_executor:
+  image:
+    id: sha256:ea3567841c47af48df3c67c87851cbc5b7dda977fb0e71c534c3c8d031922b78
+influxdb:
+  image:
+    id: sha256:0072472ec977a4601581672a3e8a7ab1c083deb485983bc7ba36052459c3350f
+insider_api:
+  image:
+    id: sha256:08704664d31e4d2c995ff125fad01b8c9bb6ce866ccecfd08d9d440a0c34706d
+insider_scheduler:
+  image:
+    id: sha256:1a5d7ca5ea3a93e3cb3977912b3c476aa13db076fdfa67cff2d39ecbf246bbd3
+insider_worker:
+  image:
+    id: sha256:5a3fda759a4847227e91d3941e3a06881f1106695cc8a5810ca63deae289858f
+jira_bus:
+  image:
+    id: sha256:6c1086bffaff27fb13a59e3de0dd7ee52a5b3f2a34e51a57bfea71364738ab51
+jira_ui:
+  image:
+    id: sha256:d4d66a33d6c7f2c6640e0ba48d93ef9ab72d47a393d74b8152b7175c3c17bb62
+katara_service:
+  image:
+    id: sha256:7f2fdd3850861dd7ac6c0ce491db19d4b561a85983a56a381449bcbe7371a462
+katara_worker:
+  image:
+    id: sha256:9e4052a640d26ec26887b8cb206c79f6797ef5400c421bdf8d3e23415e4c83ef
+keeper:
+  image:
+    id: sha256:abecf3709256c74ff098aa6f512b8286f51537c421d491ad6aa887f50f1753c3
+keeper_executor:
+  image:
+    id: sha256:f26815a5d2b5be2076fa9aad715e6616506d09e47ff032a6889daa4f1838a1b0
+layout_cleaner:
+  image:
+    id: sha256:069e68bd6fb8ecafc70eeeccec3043f11d46f7112c6383a838f442f6f00263c7
+live_demo_generator:
+  image:
+    id: sha256:d6745729d81f54663afb29a7b086523b4fa4f555015f0bce2044a1487db4b131
+mariadb:
+  image:
+    id: sha256:9d59a5bd772ea121c4b81ce48cd4590485cde9ff3c87760aa4349fc369c97325
+metroculus_api:
+  image:
+    id: sha256:ea883f57f8a3d684ae85585b22ac958edb606da937fb4d5dad28e32dfc032414
+metroculus_scheduler:
+  image:
+    id: sha256:1c4b9cfe0255b7efbd661c406f45ede1cb04a4e63f675b16d78d266a2a5505df
+metroculus_worker:
+  image:
+    id: sha256:005f6a312e01a454ff760995f6d650bbac77475a736aa7d1a57ebb8777703b73
+mongo:
+  image:
+    id: sha256:f80e9303e8a0ca345299b2414c5fd50a1e4f4c783c05959538d75d0b3228b521
+ngui:
+  image:
+    id: sha256:05731d1fe93202836919804f7577021ed1f2979d8a0fde395f429199c281d966
+nodes:
+- aks-agentpool-30570325-vmss000002
+- aks-agentpool-30570325-vmss000003
+optscale_key: !!binary |
+  LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JSUV2UUlCQURBTkJna3Foa2lHOXcwQkFRRUZB
+  QVNDQktjd2dnU2pBZ0VBQW9JQkFRQ2lWLzUwcDNoK01WREUKSDA1REZDdHNSaXBLNXdlWkdHRzh3
+  c0NQM2dNS3BkdXFOd1V5ZUxjSHZkUFBCWXM2SVorOUhaQnBoZkZ5bDgycwp1dW5yV3pXZUp3Y1NJ
+  OTZ4V3pRa3ZNaGI5VnM0cFp2bFMvUnBEa0ZleURBcDVLalNUcG9kd0JjVURsWHV3bE9oCk9NYXRW
+  RTc0VmlRSjN6c1M2YmNQNjFEUVh3TVUybXMvOFR4cWc5clZiTkVxZDZ0WHlHbk1QR0xtU2JyTE5i
+  NWUKYzd0dENCakdhUkE2cUs2bHA3OXdlRVBOWGo3cE5OWDNvc3JZYzJlOEpsNGlOeUlsRjdrZ3Zh
+  VUljVEZmdUdXVgo0b0lRK0lHU2RxZFdNNi91WmhmNTFNRXp3QWtrQVFxTEZrK0ZXZWptMzNXcFNW
+  VmxKaEhiQXZFOENBTktLWHUwClF2SWpsNGxsQWdNQkFBRUNnZ0VBQWpUdTNJek1oTXFlMG5BOHlk
+  SmFwd29oczFRWW9sZ2ZwU0x3bFhIR2tNOFAKT0RaQmloMkdpSXZWd0JqenhCMzBVZXdTR2VaQXlE
+  KzBsYjBTYXp0MUJvNTVRWStWaklKK0E0aXZzdFRoUmJScwo0cVl3aGcwUGptdjlwTUhhOVE2YlUv
+  MVg1VURCTkpHbnE2ZW5FRXdiWDlnK05BWnZwN1VFZFNwZVNKSkNEK1RFCjdHQ213b2tJOVd2VVZ5
+  VzFBYU96TkF1bnhhNmdaa1Z3QXZ2cHcyM2U5c1h3cW5Ob21tc2svVzVISHVncitLY1YKaDlENVZ5
+  RVFndVQyTjNZU3ZzbkZ6c0RMOCt0Q1JlQXJ6R3BheFg2aDVDcHVBbGN1Uk12d0J1dk5GZjdxWEtD
+  Ywp5dVpRNnQ1LytKYXk0bnNJaVdFbEJURDAyN3VVTDEveXFLU21aTmg3Z1FLQmdRRFVnd2N6SDNE
+  QWtuUkhPalZMCnpnMWZyOEx0L1J3RENuWHIrdmc1T1M1MEdSTmI5akJGclZuaUtqUkpFMnpZMFRE
+  Uk5wTUl1Q1NrUExTajdOL2wKczR2aHpxbHdqQzVFdDFsYWp0WjJ2bThiYjhEMEQwNllTb2IwWmVY
+  YTNRRXEzYWRHTGljaVJkdXk3c0dNWkd1Ugp6UHFlcVFBNHRPKzZrMWUwcWhFOUpGSlZQUUtCZ1FE
+  RGtNaExDNy9VbHFlU0hWSVh6WUo1V21GZTJkL3hJY0xIClEvbmw1c2NPa2ZzTzlrazV6MU1mOFJa
+  LzR3aTEwM3ZyZENaQU5VckRCRnVSaHdod2FnSVFVRmhsREttVXp4UXQKQTZNRlNrQld0NDNVWThn
+  dVRxdXJZSlhscUlWSzhwSXN4bktZZHF1SmZBZVE2aW85SjE1U1Z1SEliQW9GaG9FUApTUjdGZXhQ
+  WFNRS0JnSG52aE40TW1FR214eGxuaU5VcU1mcEplMnZhNDR2TElNWjZocHN1K0R5ZGRzSTVqSkV1
+  ClduaXZCcmszY0Nrb1B2Nk1kZWwyMzI5dGRhanBiYjc3T3JRaVJJN1RvR2pGVzN2ZW9hZ1l0Ti9s
+  UzYyK2FyWnYKYk9nbTM3Q3BSdFkxd0psQU9pd3NNVmVHTDRCQ3pvWW1PMWQyV1M0d2c2MW1oZGln
+  REt3c2Z5RnhBb0dBUmozVApZdmtHWHFINThBWXQvVFNvUDFRU0V4Sm9WK0NMYUN6bkxnY1V5Z3Z1
+  dzdIOEhSSjFSY3kvQ3hJTmg5azg4aFhXCncwc2czaWpMaHRxY1Vsd1EvN0VML3Nkc2hYRlhTcys2
+  bHVUVGRSSWFsQVYrMmZzUnQ4MUtLYUc4dG0ybnlRTkMKRjdiUDUrS3ZpUUpDUjVMRFV3bTNzTmYx
+  UllUSkNDZDRNUEFDOFZrQ2dZRUFnRXBGb2pMNFRZSXlZVEhuQjFmWQpLendoWGpIaXN3Ylk4MGtQ
+  c25LbFJDc2N6YkhIb2V2c01oQVJzSTNLRk5LbHBKTXN0Z3V1d1Brc3NtVGhleWYyCm01aG5XclRC
+  UTJuNER3dVB5T2liUU96ellRVGROaGtKbmQvVVhUTTZhaDBYRVl4QVYrTEtzZkJHOGVnQklYdVYK
+  aFFDeFNmVE5ZMXFZWUhTNCtPL0FqZEU9Ci0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0K
+organization_violations:
+  image:
+    id: sha256:8491b12c0d067e22c2e9db650cb266f3e54c560ec3ab22c339bf15f3e9b390a5
+overlay_list: overlay/user_template.yml
+power_schedule:
+  image:
+    id: sha256:9d6c0aadf08cf2d1349d37ea6ddd02bfb2f71904fc79b69a59fbda805916e474
+public_ip: aks-optscale-dns-ik0rzmg7.hcp.westus2.azmk8s.io
+redis:
+  image:
+    id: sha256:899f116c331e28e00a19a002f7f093b7e9480a316c198b2a1452036274f6ef4a
+release: optscale
+resource_discovery:
+  image:
+    id: sha256:473fe54e64b0fe223e32b5d7c2e26e89e877733864c21e8c2a912785a7a32101
+resource_observer:
+  image:
+    id: sha256:7db53877b138b1164ccfb7c36e3a28268ec3b564fe7ca93fbf1212b3afc28e81
+resource_violations:
+  image:
+    id: sha256:8f0a6a735fc57a5190ec9fabdda5705b382655f70fa1dd0da9928c02dae7cf54
+rest_api:
+  image:
+    id: sha256:0c640d99b718724abf427312fbf5dcefe6fbb23153e524bb0bd4fd364b07bca1
+risp_scheduler:
+  image:
+    id: sha256:60038c383acacb551a645a536c4e40a7d48da2002b644c839ce8432afe92f944
+risp_worker:
+  image:
+    id: sha256:960c0e8c487e825f92b1466aff7cdcee06d2805c0140ab74803d1273ecf915b7
+slacker:
+  image:
+    id: sha256:65ee1ad0e18a113fd8a7d24cd0eac6639e6261e2097bcba1a169d2e23b3bd628
+slacker_executor:
+  image:
+    id: sha256:32187efac0e5a3c32f8ad51222a644ecb08c9d1e11f0207ca1da0bd861464bd4
+subspector:
+  image:
+    id: sha256:cc0f02015110f2b812a70cc174cc1af780adaf2e5cdadb46306a258052440043
+subsyncer:
+  image:
+    id: sha256:c35efe3f888a43486b807066842a0fc8751fc69bb69693e502f12244c8b76090
+trapper_scheduler:
+  image:
+    id: sha256:d55c57237d5759aac0cf8fa34b1fe479e5e62189efc0bc657fd77b65b2a24358
+trapper_worker:
+  image:
+    id: sha256:816c418feb65412be5ed4cc41ba36157cb368c9fb254426ce98b5de46ef79cc6
+users_dataset_generator:
+  image:
+    id: sha256:a2c7aa5fbe5f03cfaa9f9322cffd6091b94bbb3a469fcbafbe37139bc61f369c
+webhook_executor:
+  image:
+    id: sha256:872a7e01b39811f474011e30267f169f2db7ea72eba3e5b9b9aed4c2df241523
