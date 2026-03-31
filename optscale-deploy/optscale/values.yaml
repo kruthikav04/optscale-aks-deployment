@@ -320,15 +320,15 @@ bumiworker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/bumischeduler
+    repository: hystax/bumiworker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 report_import_scheduler:
   name: report-import-scheduler
   image:
-    repository: hystax/bumischeduler
-    tag: latest
+    repository: hystax/report_import_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
 
@@ -346,7 +346,7 @@ resource_discovery:
 demo_org_cleanup:
   name: demoorgcleanup
   image:
-    repository: hystax/bumischeduler
+    repository: hystax/demo_org_cleanup
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -416,7 +416,7 @@ grafana:
   internalPort: 3000
   image:
     id:
-    repository: hystax/grafana/grafana
+    repository: grafana/grafana
     tag: 10.4.2
     pullPolicy: IfNotPresent
   service:
@@ -428,8 +428,8 @@ grafana:
     name: grafana-nginx
     image:
       id:
-      repository: hystax/grafana/grafana
-      tag: 10.4.2
+      repository: hystax/grafana_nginx
+      tag: 2026030201-public
       pullPolicy: IfNotPresent
   env:
     htpasswd_user: userforgrafana

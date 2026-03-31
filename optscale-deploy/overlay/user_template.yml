@@ -10,9 +10,9 @@ service_credentials:
     access_key_id: accesskeyid
     secret_access_key: secretaccesskey
   azure:
-    client_id: "<APP_ID>"
-    tenant: "<TENANT_ID>"
-    secret: "<CLIENT_SECRET>"
+        client_id: "<appId>"
+        tenant: "<tenant>"
+        secret: ""
     subscription_id: "442c2f42-962b-4a21-bea5-db44a51fb466"
   alibaba:
     access_key_id: accesskeyid
@@ -31,7 +31,7 @@ service_credentials:
         -----BEGIN PRIVATE KEY-----
         -----END PRIVATE KEY-----
       client_email: optscale-service-credentials@yourproject.iam.gserviceaccount.com
-      client_id: "111111111"
+          client_id: "<appId>"
       auth_uri: https://accounts.google.com/o/oauth2/auth
       token_uri: https://oauth2.googleapis.com/token
       auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
@@ -74,7 +74,7 @@ google_calendar_service:
       -----BEGIN PRIVATE KEY-----
       -----END PRIVATE KEY-----
     client_email: calendar-service@optscale.iam.gserviceaccount.com
-    client_id: ""
+        client_id: "<appId>"
     auth_uri: https://accounts.google.com/o/oauth2/auth
     token_uri: https://oauth2.googleapis.com/token
     auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
@@ -87,15 +87,15 @@ encryption_key: fffffxdddeadb33f
 # - https://console.developers.google.com/ to see registered origins for the Google OAuth client"
 # - https://portal.azure.com/ to see registered origins for the Microsoft OAuth client"
 auth:
-  google_oauth_client_id: ""
-  google_oauth_client_secret: ""
-  microsoft_oauth_client_id: ""
+  google_oauth_    client_id: "<appId>"
+  google_oauth_client_    secret: ""
+  microsoft_oauth_    client_id: "<appId>"
 
 ngui:
   env:
     build_mode: ""
-    google_oauth_client_id: ""
-    microsoft_oauth_client_id: ""
+    google_oauth_    client_id: "<appId>"
+    microsoft_oauth_    client_id: "<appId>"
     google_map_api_key: ""
     ganalytics_id: ""
     hotjar_id: ""
