@@ -1,7 +1,8 @@
 # secret should be permanent for cluster installation
 # change it before cluster installation
 secrets:
-  cluster: fc83d31-461d-44c5-b4d5-41a32d6c36a1
+  cluster: "my-super-secret"
+  agent: "my-super-secret"
 
 # service credentials for getting pricing information from the different clouds
 # recommendations will not work without this
@@ -10,9 +11,9 @@ service_credentials:
     access_key_id: accesskeyid
     secret_access_key: secretaccesskey
   azure:
-        client_id: "<appId>"
-        tenant: "<tenant>"
-        secret: ""
+    client_id: "<appId>"
+    tenant: "<tenant>"
+    secret: "REPLACE_AT_RUNTIME"
     subscription_id: "442c2f42-962b-4a21-bea5-db44a51fb466"
   alibaba:
     access_key_id: accesskeyid
