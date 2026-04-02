@@ -58,10 +58,10 @@ class Runkube:
                  version, wait_timeout=0):
         self.name = name
         if config is None:
-            self.config = os.path.join(os.environ.get('HOME'), '.kube/config')
+            self.config = os.environ.get('KUBECONFIG') or os.path.join(os.environ.get('HOME'), '.kube/config')
         else:
             self.config = config
-        os.environ['KUBECONFIG'] = self.config
+        os.environ.setdefault('KUBECONFIG', self.config)
         self.overlays = overlays
         self.dport = dport
         self.dregistry = dregistry
@@ -74,7 +74,9 @@ class Runkube:
         self.with_elk = with_elk
         self.external_clickhouse = external_clickhouse
         self.external_mongo = external_mongo
-        k8s_config.load_kube_config(self.config)
+        cfg = os.environ.get("KUBECONFIG") or self.config or os.path.expanduser("~/.kube/config")
+        print(f"Using kubeconfig: {cfg}")
+        k8s_config.load_kube_config(config_file=cfg)
         self.use_socket = use_socket
         self.insecure = insecure
         self.version = version

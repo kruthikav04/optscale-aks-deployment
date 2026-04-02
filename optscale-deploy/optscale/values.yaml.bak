@@ -1,15 +1,15 @@
 # Default values for optscale.
 
-tag: &tag local
+tag: &tag 2026030201-public
 
 etcd:
   name: &etcd_name etcd
   replicaCount: 1
   image:
     id:
-    repository: *etcd_name
-    tag: *tag
-    pullPolicy: 
+    repository: hystax/etcd
+    tag: 2026030201-public
+    pullPolicy: IfNotPresent
   service:
     name: etcd-client
     type: ClusterIP
@@ -25,8 +25,8 @@ mariadb:
   replicaCount: 1
   image:
     id:
-    repository: *mariadb_name
-    tag: *tag
+    repository: hystax/mariadb
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   credentials:
     username: root
@@ -44,8 +44,8 @@ mongo:
   cache_size: 1.0
   image:
     id:
-    repository: *mongo_name
-    tag: *tag
+    repository: hystax/mongo
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     host: *mongo_name
@@ -63,6 +63,7 @@ rabbitmq:
   replicaCount: 1
   mnesiaSize: 10Gi
   memory_limit: 512
+  storageClass: azurefile-csi
   enableClassicMirroring: false # MUST be false on 4.x
   enableQuorumDefaults: true # optional: default policy for quorum queues
   quorum:
@@ -87,8 +88,8 @@ redis:
   replicaCount: 1
   image:
     id:
-    repository: *redis_name
-    tag: *tag
+    repository: hystax/redis
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *redis_name
@@ -101,8 +102,8 @@ rest_api:
   replicaCount: 1
   image:
     id:
-    repository: rest_api
-    tag: *tag
+    repository: hystax/rest_api
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *rest_api_name
@@ -115,8 +116,8 @@ auth:
   replicaCount: 1
   image:
     id:
-    repository: *auth_name
-    tag: *tag
+    repository: hystax/auth
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *auth_name
@@ -133,8 +134,8 @@ keeper:
   replicaCount: 1
   image:
     id:
-    repository: *keeper_name
-    tag: *tag
+    repository: hystax/keeper
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *keeper_name
@@ -155,12 +156,12 @@ phpmyadmin:
     internalPort: 80
 
 tempo:
-  enabled: true
+  enabled: false
   name: &tempo_name tempo
   replicaCount: 1
   image:
     id:
-    repository: grafana/tempo
+    repository: hystax/grafana/tempo
     tag: "2.10.0"
     pullPolicy: IfNotPresent
   service:
@@ -183,8 +184,8 @@ herald:
     replicaCount: 2
   image:
     id:
-    repository: *herald_name
-    tag: *tag
+    repository: hystax/herald
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *herald_name
@@ -200,8 +201,8 @@ elk:
   es_heap_size: 1g
   image:
     id:
-    repository: *elk_name
-    tag: *tag
+    repository: hystax/elk
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *elk_name
@@ -219,7 +220,8 @@ filebeat:
   name: &filebeat filebeat
   image:
     id:
-    repository: *filebeat
+    repository: docker.elastic.co/beats/filebeat
+    tag: 8.12.2
     pullPolicy: IfNotPresent
   service:
     name: *filebeat
@@ -232,8 +234,8 @@ ngui:
   replicaCount: 1
   image:
     id:
-    repository: *ngui_name
-    tag: *tag
+    repository: hystax/ngui
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *ngui_name
@@ -272,8 +274,8 @@ diworker:
   replicaCount: 1
   image:
     id:
-    repository: *diworker_name
-    tag: *tag
+    repository: hystax/diworker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 katara_service:
@@ -286,8 +288,8 @@ katara_service:
     replicaCount: 1
   image:
     id:
-    repository: katara_service
-    tag: *tag
+    repository: hystax/katara_service
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *katara_name
@@ -300,8 +302,8 @@ katara_worker:
   replicaCount: 1
   image:
     id:
-    repository: katara_worker
-    tag: *tag
+    repository: hystax/katara_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 bumischeduler:
@@ -309,8 +311,8 @@ bumischeduler:
   replicaCount: 1
   image:
     id:
-    repository: *bumi_scheduler_name
-    tag: *tag
+    repository: hystax/bumischeduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 bumiworker:
@@ -318,15 +320,15 @@ bumiworker:
   replicaCount: 1
   image:
     id:
-    repository: *bumi_worker_name
-    tag: *tag
+    repository: hystax/bumiworker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 report_import_scheduler:
   name: report-import-scheduler
   image:
-    repository: curlimages/curl
-    tag: latest
+    repository: hystax/report_import_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
 
@@ -334,8 +336,8 @@ resource_discovery:
   name: resource-discovery
   replicaCount: 2 # amount of workers
   image:
-    repository: resource_discovery
-    tag: *tag
+    repository: hystax/resource_discovery
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -344,8 +346,8 @@ resource_discovery:
 demo_org_cleanup:
   name: demoorgcleanup
   image:
-    repository: demo_org_cleanup
-    tag: *tag
+    repository: hystax/demo_org_cleanup
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 0 * * *"
@@ -355,8 +357,8 @@ resource_observer:
   name: resource-observer
   replicaCount: 1 # amount of workers
   image:
-    repository: resource_observer
-    tag: *tag
+    repository: hystax/resource_observer
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -365,8 +367,8 @@ resource_violations:
   name: resource-violations
   replicaCount: 1 # amount of workers
   image:
-    repository: resource_violations
-    tag: *tag
+    repository: hystax/resource_violations
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -375,8 +377,8 @@ calendar_observer:
   name: calendar-observer
   replicaCount: 1 # amount of workers
   image:
-    repository: calendar_observer
-    tag: *tag
+    repository: hystax/calendar_observer
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 * * * *"
@@ -386,13 +388,13 @@ influxdb:
   replicaCount: 1
   image:
     id:
-    repository: *influx_name
-    tag: *tag
+    repository: hystax/influxdb
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *influx_name
     type: ClusterIP
-    externalPort: &influx_external_port 80
+    externalPort: &influx_external_port 8086
     internalPort: 8086
 
 # enable to deploy cleaninfluxdb pod
@@ -405,7 +407,7 @@ cleaninfluxdb:
   influxdb_host: *influx_name
   influxdb_port: *influx_external_port
   image:
-    repository: *cleaninfluxdb
+    repository: hystax/cleaninfluxdb
     tag: 2026030201-public
 
 grafana:
@@ -414,8 +416,8 @@ grafana:
   internalPort: 3000
   image:
     id:
-    repository: *grafana_name
-    tag: *tag
+    repository: grafana/grafana
+    tag: 10.4.2
     pullPolicy: IfNotPresent
   service:
     name: *grafana_name
@@ -426,8 +428,8 @@ grafana:
     name: grafana-nginx
     image:
       id:
-      repository: grafana_nginx
-      tag: *tag
+      repository: hystax/grafana_nginx
+      tag: 2026030201-public
       pullPolicy: IfNotPresent
   env:
     htpasswd_user: userforgrafana
@@ -437,8 +439,8 @@ insider_scheduler:
   name: insider-scheduler
   replicaCount: 1
   image:
-    repository: insider_scheduler
-    tag: *tag
+    repository: hystax/insider_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 0 * * *"
@@ -448,8 +450,8 @@ insider_worker:
   replicaCount: 1
   image:
     id:
-    repository: insider_worker
-    tag: *tag
+    repository: hystax/insider_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 insider_api:
@@ -457,8 +459,8 @@ insider_api:
   replicaCount: 1
   image:
     id:
-    repository: insider_api
-    tag: *tag
+    repository: hystax/insider_api
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *insider_api_name
@@ -471,8 +473,8 @@ slacker:
   replicaCount: 1
   image:
     id:
-    repository: *slacker_name
-    tag: *tag
+    repository: hystax/slacker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *slacker_name
@@ -489,8 +491,8 @@ error_pages:
   replicaCount: 1
   image:
     id:
-    repository: error_pages
-    tag: *tag
+    repository: hystax/error_pages
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *error_pages_name
@@ -525,8 +527,8 @@ metroculus_scheduler:
   name: metroculusscheduler
   replicaCount: 1
   image:
-    repository: metroculus_scheduler
-    tag: *tag
+    repository: hystax/metroculus_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/30 * * * *"
@@ -536,8 +538,8 @@ metroculus_worker:
   replicaCount: 1
   image:
     id:
-    repository: metroculus_worker
-    tag: *tag
+    repository: hystax/metroculus_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 metroculus_api:
@@ -545,8 +547,8 @@ metroculus_api:
   replicaCount: 1
   image:
     id:
-    repository: metroculus_api
-    tag: *tag
+    repository: hystax/metroculus_api
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *metroculus_api_name
@@ -559,8 +561,8 @@ webhook_executor:
   replicaCount: 1
   image:
     id:
-    repository: webhook_executor
-    tag: *tag
+    repository: hystax/webhook_executor
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 slacker_executor:
@@ -568,8 +570,8 @@ slacker_executor:
   replicaCount: 1
   image:
     id:
-    repository: slacker_executor
-    tag: *tag
+    repository: hystax/slacker_executor
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 herald_executor:
@@ -577,8 +579,8 @@ herald_executor:
   replicaCount: 1
   image:
     id:
-    repository: herald_executor
-    tag: *tag
+    repository: hystax/herald_executor
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 keeper_executor:
@@ -586,16 +588,16 @@ keeper_executor:
   replicaCount: 1
   image:
     id:
-    repository: keeper_executor
-    tag: *tag
+    repository: hystax/keeper_executor
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 booking_observer:
   name: booking-observer
   replicaCount: 2 # amount of workers
   image:
-    repository: booking_observer
-    tag: *tag
+    repository: hystax/booking_observer
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/1 * * * *"
@@ -605,8 +607,8 @@ jira_bus:
   replicaCount: 1
   image:
     id:
-    repository: jira_bus
-    tag: *tag
+    repository: hystax/jira_bus
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *jira_bus_name
@@ -619,8 +621,8 @@ jira_ui:
   replicaCount: 1
   image:
     id:
-    repository: jira_ui
-    tag: *tag
+    repository: hystax/jira_ui
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *jira_ui_name
@@ -632,8 +634,8 @@ organization_violations:
   name: organization-violations
   replicaCount: 1 # amount of workers
   image:
-    repository: organization_violations
-    tag: *tag
+    repository: hystax/organization_violations
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -642,8 +644,8 @@ cleanmongodb:
   name: cleanmongodb
   image:
     id:
-    repository: cleanmongodb
-    tag: *tag
+    repository: hystax/cleanmongodb
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/3 * * * *"
@@ -656,8 +658,8 @@ trapper_scheduler:
   name: trapper-scheduler
   replicaCount: 1
   image:
-    repository: trapper_scheduler
-    tag: *tag
+    repository: hystax/trapper_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "45 */1 * * *"
@@ -667,16 +669,16 @@ trapper_worker:
   replicaCount: 1
   image:
     id:
-    repository: trapper_worker
-    tag: *tag
+    repository: hystax/trapper_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 risp_scheduler:
   name: risp-scheduler
   replicaCount: 1
   image:
-    repository: risp_scheduler
-    tag: *tag
+    repository: hystax/risp_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "45 */1 * * *"
@@ -686,16 +688,16 @@ risp_worker:
   replicaCount: 1
   image:
     id:
-    repository: risp_worker
-    tag: *tag
+    repository: hystax/risp_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 gemini_scheduler:
   name: gemini-scheduler
   image:
     id:
-    repository: gemini_scheduler
-    tag: *tag
+    repository: hystax/gemini_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -705,16 +707,16 @@ gemini_worker:
   replicaCount: 1
   image:
     id:
-    repository: gemini_worker
-    tag: *tag
+    repository: hystax/gemini_worker
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 bi_scheduler:
   name: bi-scheduler
   image:
     id:
-    repository: bi_scheduler
-    tag: *tag
+    repository: hystax/bi_scheduler
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -724,15 +726,15 @@ bi_exporter:
   replicaCount: 1
   image:
     id:
-    repository: bi_exporter
-    tag: *tag
+    repository: hystax/bi_exporter
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 failed_imports_dataset_generator:
   name: failed-imports-dataset-generator
   image:
-    repository: failed_imports_dataset_generator
-    tag: *tag
+    repository: hystax/bi_exporter
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 0 * * *"
@@ -832,7 +834,7 @@ diproxy:
   replicaCount: 1
   image:
     id:
-    repository: *diproxy_name
+    repository: hystax/diproxy
     tag: *tag
     pullPolicy: IfNotPresent
   service:
@@ -844,8 +846,8 @@ diproxy:
 users_dataset_generator:
   name: users-dataset-generator
   image:
-    repository: users_dataset_generator
-    tag: *tag
+    repository: hystax/users_dataset_generator
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 0 * * *"
@@ -860,8 +862,8 @@ live_demo_generator:
   name: live-demo-generator
   replicaCount: 1 # amount of workers
   image:
-    repository: live_demo_generator
-    tag: *tag
+    repository: hystax/live_demo_generator
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 * * * *"
@@ -870,8 +872,8 @@ power_schedule:
   name: power-schedule
   replicaCount: 1 # amount of workers
   image:
-    repository: power_schedule
-    tag: *tag
+    repository: hystax/power_schedule
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "*/5 * * * *"
@@ -880,8 +882,8 @@ layout_cleaner:
   name: layout-cleaner
   image:
     id:
-    repository: layout_cleaner
-    tag: *tag
+    repository: hystax/layout_cleaner
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 3 * * *"
@@ -891,8 +893,8 @@ subspector:
   replicaCount: 1
   image:
     id:
-    repository: subspector
-    tag: *tag
+    repository: hystax/subspector
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
     name: *subspector_name
@@ -903,8 +905,8 @@ subspector:
 subsyncer:
   name: subsyncer
   image:
-    repository: subsyncer
-    tag: *tag
+    repository: hystax/subsyncer
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "0 * * * *"
@@ -913,8 +915,8 @@ bailiff:
   name: bailiff
   replicaCount: 1
   image:
-    repository: bailiff
-    tag: *tag
+    repository: hystax/bailiff
+    tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
   schedule: "30 * * * *"
@@ -970,7 +972,7 @@ cleanelkdb:
   startingDeadlineSeconds: 100
   log_max_size: 5120
   image:
-    repository: *cleanelkdb_name
+    repository: hystax/cleanelkdb
     tag: 2026030201-public
 
 # Set to true if you want to start/update cluster without touching existing config
@@ -1121,7 +1123,7 @@ stripe:
 
 #open telemetry settings
 opentelemetry:
-  enabled: true
+  enabled: false
   exporter: otlp
   exporters:
     azure_monitor:

@@ -32,7 +32,7 @@ service_credentials:
         -----BEGIN PRIVATE KEY-----
         -----END PRIVATE KEY-----
       client_email: optscale-service-credentials@yourproject.iam.gserviceaccount.com
-          client_id: "<appId>"
+      client_id: "<appId>"
       auth_uri: https://accounts.google.com/o/oauth2/auth
       token_uri: https://oauth2.googleapis.com/token
       auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
@@ -75,7 +75,7 @@ google_calendar_service:
       -----BEGIN PRIVATE KEY-----
       -----END PRIVATE KEY-----
     client_email: calendar-service@optscale.iam.gserviceaccount.com
-        client_id: "<appId>"
+    client_id: "<appId>"
     auth_uri: https://accounts.google.com/o/oauth2/auth
     token_uri: https://oauth2.googleapis.com/token
     auth_provider_x509_cert_url: https://www.googleapis.com/oauth2/v1/certs
