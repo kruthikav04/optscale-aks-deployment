@@ -7,7 +7,7 @@ etcd:
   replicaCount: 1
   image:
     id:
-    repository: hystax/etcd
+    repository: optscaleacr2026.azurecr.io/hystax/etcd
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -25,7 +25,7 @@ mariadb:
   replicaCount: 1
   image:
     id:
-    repository: hystax/mariadb
+    repository: optscaleacr2026.azurecr.io/hystax/mariadb
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   credentials:
@@ -44,7 +44,7 @@ mongo:
   cache_size: 1.0
   image:
     id:
-    repository: hystax/mongo
+    repository: optscaleacr2026.azurecr.io/hystax/mongo
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -88,7 +88,7 @@ redis:
   replicaCount: 1
   image:
     id:
-    repository: hystax/redis
+    repository: optscaleacr2026.azurecr.io/hystax/redis
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -102,7 +102,7 @@ rest_api:
   replicaCount: 1
   image:
     id:
-    repository: hystax/rest_api
+    repository: optscaleacr2026.azurecr.io/hystax/rest_api
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -116,7 +116,7 @@ auth:
   replicaCount: 1
   image:
     id:
-    repository: hystax/auth
+    repository: optscaleacr2026.azurecr.io/hystax/auth
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -134,7 +134,7 @@ keeper:
   replicaCount: 1
   image:
     id:
-    repository: hystax/keeper
+    repository: optscaleacr2026.azurecr.io/hystax/keeper
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -161,7 +161,7 @@ tempo:
   replicaCount: 1
   image:
     id:
-    repository: hystax/grafana/tempo
+    repository: optscaleacr2026.azurecr.io/hystax/grafana/tempo
     tag: "2.10.0"
     pullPolicy: IfNotPresent
   service:
@@ -184,7 +184,7 @@ herald:
     replicaCount: 2
   image:
     id:
-    repository: hystax/herald
+    repository: optscaleacr2026.azurecr.io/hystax/herald
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -201,7 +201,7 @@ elk:
   es_heap_size: 1g
   image:
     id:
-    repository: hystax/elk
+    repository: optscaleacr2026.azurecr.io/hystax/elk
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -234,7 +234,7 @@ ngui:
   replicaCount: 1
   image:
     id:
-    repository: hystax/ngui
+    repository: optscaleacr2026.azurecr.io/hystax/ngui
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -274,7 +274,7 @@ diworker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/diworker
+    repository: optscaleacr2026.azurecr.io/hystax/diworker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -288,7 +288,7 @@ katara_service:
     replicaCount: 1
   image:
     id:
-    repository: hystax/katara_service
+    repository: optscaleacr2026.azurecr.io/hystax/katara_service
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -302,7 +302,7 @@ katara_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/katara_worker
+    repository: optscaleacr2026.azurecr.io/hystax/katara_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -311,7 +311,7 @@ bumischeduler:
   replicaCount: 1
   image:
     id:
-    repository: hystax/bumischeduler
+    repository: optscaleacr2026.azurecr.io/hystax/bumischeduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -320,14 +320,14 @@ bumiworker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/bumiworker
+    repository: optscaleacr2026.azurecr.io/hystax/bumiworker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 report_import_scheduler:
   name: report-import-scheduler
   image:
-    repository: hystax/report_import_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/report_import_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -336,7 +336,7 @@ resource_discovery:
   name: resource-discovery
   replicaCount: 2 # amount of workers
   image:
-    repository: hystax/resource_discovery
+    repository: optscaleacr2026.azurecr.io/hystax/resource_discovery
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -346,7 +346,7 @@ resource_discovery:
 demo_org_cleanup:
   name: demoorgcleanup
   image:
-    repository: hystax/demo_org_cleanup
+    repository: optscaleacr2026.azurecr.io/hystax/demo_org_cleanup
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -357,7 +357,7 @@ resource_observer:
   name: resource-observer
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/resource_observer
+    repository: optscaleacr2026.azurecr.io/hystax/resource_observer
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -367,7 +367,7 @@ resource_violations:
   name: resource-violations
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/resource_violations
+    repository: optscaleacr2026.azurecr.io/hystax/resource_violations
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -377,7 +377,7 @@ calendar_observer:
   name: calendar-observer
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/calendar_observer
+    repository: optscaleacr2026.azurecr.io/hystax/calendar_observer
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -388,7 +388,7 @@ influxdb:
   replicaCount: 1
   image:
     id:
-    repository: hystax/influxdb
+    repository: optscaleacr2026.azurecr.io/hystax/influxdb
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -398,7 +398,7 @@ influxdb:
     internalPort: 8086
 
 # enable to deploy cleaninfluxdb pod
-deploy_cleaninfluxdb: "true"
+deploy_cleaninfluxdb: "false"
 cleaninfluxdb:
   name: &cleaninfluxdb cleaninfluxdb
   schedule: "@weekly"
@@ -407,7 +407,7 @@ cleaninfluxdb:
   influxdb_host: *influx_name
   influxdb_port: *influx_external_port
   image:
-    repository: hystax/cleaninfluxdb
+    repository: optscaleacr2026.azurecr.io/hystax/cleaninfluxdb
     tag: 2026030201-public
 
 grafana:
@@ -428,7 +428,7 @@ grafana:
     name: grafana-nginx
     image:
       id:
-      repository: hystax/grafana_nginx
+      repository: optscaleacr2026.azurecr.io/hystax/grafana_nginx
       tag: 2026030201-public
       pullPolicy: IfNotPresent
   env:
@@ -439,7 +439,7 @@ insider_scheduler:
   name: insider-scheduler
   replicaCount: 1
   image:
-    repository: hystax/insider_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/insider_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -450,7 +450,7 @@ insider_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/insider_worker
+    repository: optscaleacr2026.azurecr.io/hystax/insider_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -459,7 +459,7 @@ insider_api:
   replicaCount: 1
   image:
     id:
-    repository: hystax/insider_api
+    repository: optscaleacr2026.azurecr.io/hystax/insider_api
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -473,7 +473,7 @@ slacker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/slacker
+    repository: optscaleacr2026.azurecr.io/hystax/slacker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -491,7 +491,7 @@ error_pages:
   replicaCount: 1
   image:
     id:
-    repository: hystax/error_pages
+    repository: optscaleacr2026.azurecr.io/hystax/error_pages
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -527,7 +527,7 @@ metroculus_scheduler:
   name: metroculusscheduler
   replicaCount: 1
   image:
-    repository: hystax/metroculus_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/metroculus_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -538,7 +538,7 @@ metroculus_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/metroculus_worker
+    repository: optscaleacr2026.azurecr.io/hystax/metroculus_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -547,7 +547,7 @@ metroculus_api:
   replicaCount: 1
   image:
     id:
-    repository: hystax/metroculus_api
+    repository: optscaleacr2026.azurecr.io/hystax/metroculus_api
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -561,7 +561,7 @@ webhook_executor:
   replicaCount: 1
   image:
     id:
-    repository: hystax/webhook_executor
+    repository: optscaleacr2026.azurecr.io/hystax/webhook_executor
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -570,7 +570,7 @@ slacker_executor:
   replicaCount: 1
   image:
     id:
-    repository: hystax/slacker_executor
+    repository: optscaleacr2026.azurecr.io/hystax/slacker_executor
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -579,7 +579,7 @@ herald_executor:
   replicaCount: 1
   image:
     id:
-    repository: hystax/herald_executor
+    repository: optscaleacr2026.azurecr.io/hystax/herald_executor
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -588,7 +588,7 @@ keeper_executor:
   replicaCount: 1
   image:
     id:
-    repository: hystax/keeper_executor
+    repository: optscaleacr2026.azurecr.io/hystax/keeper_executor
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -596,7 +596,7 @@ booking_observer:
   name: booking-observer
   replicaCount: 2 # amount of workers
   image:
-    repository: hystax/booking_observer
+    repository: optscaleacr2026.azurecr.io/hystax/booking_observer
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -607,7 +607,7 @@ jira_bus:
   replicaCount: 1
   image:
     id:
-    repository: hystax/jira_bus
+    repository: optscaleacr2026.azurecr.io/hystax/jira_bus
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -621,7 +621,7 @@ jira_ui:
   replicaCount: 1
   image:
     id:
-    repository: hystax/jira_ui
+    repository: optscaleacr2026.azurecr.io/hystax/jira_ui
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -634,7 +634,7 @@ organization_violations:
   name: organization-violations
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/organization_violations
+    repository: optscaleacr2026.azurecr.io/hystax/organization_violations
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -644,7 +644,7 @@ cleanmongodb:
   name: cleanmongodb
   image:
     id:
-    repository: hystax/cleanmongodb
+    repository: optscaleacr2026.azurecr.io/hystax/cleanmongodb
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -658,7 +658,7 @@ trapper_scheduler:
   name: trapper-scheduler
   replicaCount: 1
   image:
-    repository: hystax/trapper_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/trapper_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -669,7 +669,7 @@ trapper_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/trapper_worker
+    repository: optscaleacr2026.azurecr.io/hystax/trapper_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -677,7 +677,7 @@ risp_scheduler:
   name: risp-scheduler
   replicaCount: 1
   image:
-    repository: hystax/risp_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/risp_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -688,7 +688,7 @@ risp_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/risp_worker
+    repository: optscaleacr2026.azurecr.io/hystax/risp_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -696,7 +696,7 @@ gemini_scheduler:
   name: gemini-scheduler
   image:
     id:
-    repository: hystax/gemini_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/gemini_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -707,7 +707,7 @@ gemini_worker:
   replicaCount: 1
   image:
     id:
-    repository: hystax/gemini_worker
+    repository: optscaleacr2026.azurecr.io/hystax/gemini_worker
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
@@ -715,7 +715,7 @@ bi_scheduler:
   name: bi-scheduler
   image:
     id:
-    repository: hystax/bi_scheduler
+    repository: optscaleacr2026.azurecr.io/hystax/bi_scheduler
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -726,14 +726,14 @@ bi_exporter:
   replicaCount: 1
   image:
     id:
-    repository: hystax/bi_exporter
+    repository: optscaleacr2026.azurecr.io/hystax/bi_exporter
     tag: 2026030201-public
     pullPolicy: IfNotPresent
 
 failed_imports_dataset_generator:
   name: failed-imports-dataset-generator
   image:
-    repository: hystax/bi_exporter
+    repository: optscaleacr2026.azurecr.io/hystax/bi_exporter
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -834,7 +834,7 @@ diproxy:
   replicaCount: 1
   image:
     id:
-    repository: hystax/diproxy
+    repository: optscaleacr2026.azurecr.io/hystax/diproxy
     tag: *tag
     pullPolicy: IfNotPresent
   service:
@@ -846,7 +846,7 @@ diproxy:
 users_dataset_generator:
   name: users-dataset-generator
   image:
-    repository: hystax/users_dataset_generator
+    repository: optscaleacr2026.azurecr.io/hystax/users_dataset_generator
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -862,7 +862,7 @@ live_demo_generator:
   name: live-demo-generator
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/live_demo_generator
+    repository: optscaleacr2026.azurecr.io/hystax/live_demo_generator
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -872,7 +872,7 @@ power_schedule:
   name: power-schedule
   replicaCount: 1 # amount of workers
   image:
-    repository: hystax/power_schedule
+    repository: optscaleacr2026.azurecr.io/hystax/power_schedule
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -882,7 +882,7 @@ layout_cleaner:
   name: layout-cleaner
   image:
     id:
-    repository: hystax/layout_cleaner
+    repository: optscaleacr2026.azurecr.io/hystax/layout_cleaner
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -893,7 +893,7 @@ subspector:
   replicaCount: 1
   image:
     id:
-    repository: hystax/subspector
+    repository: optscaleacr2026.azurecr.io/hystax/subspector
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   service:
@@ -905,7 +905,7 @@ subspector:
 subsyncer:
   name: subsyncer
   image:
-    repository: hystax/subsyncer
+    repository: optscaleacr2026.azurecr.io/hystax/subsyncer
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -915,7 +915,7 @@ bailiff:
   name: bailiff
   replicaCount: 1
   image:
-    repository: hystax/bailiff
+    repository: optscaleacr2026.azurecr.io/hystax/bailiff
     tag: 2026030201-public
     pullPolicy: IfNotPresent
   startingDeadlineSeconds: 100
@@ -972,7 +972,7 @@ cleanelkdb:
   startingDeadlineSeconds: 100
   log_max_size: 5120
   image:
-    repository: hystax/cleanelkdb
+    repository: optscaleacr2026.azurecr.io/hystax/cleanelkdb
     tag: 2026030201-public
 
 # Set to true if you want to start/update cluster without touching existing config

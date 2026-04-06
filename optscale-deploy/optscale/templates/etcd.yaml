@@ -190,7 +190,7 @@ spec:
     spec:
       containers:
       - name: configurator
-        image: hystax/configurator:2026030201-public
+        image: optscaleacr2026.azurecr.io/hystax/configurator:2026030201-public
         volumeMounts:
         - name: config-volume
           mountPath: /config

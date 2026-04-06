@@ -58,10 +58,10 @@ class Runkube:
                  version, wait_timeout=0):
         self.name = name
         if config is None:
-            self.config = os.path.join(os.environ.get('HOME'), '.kube/config')
+            self.config = os.environ.get('KUBECONFIG') or os.path.join(os.environ.get('HOME'), '.kube/config')
         else:
             self.config = config
-        os.environ['KUBECONFIG'] = self.config
+        os.environ.setdefault('KUBECONFIG', self.config)
         self.overlays = overlays
         self.dport = dport
         self.dregistry = dregistry
@@ -428,7 +428,7 @@ if __name__ == '__main__':
                         default=2376, type=int)
     parser.add_argument('--dregistry',
                         help='Docker registry server for image pulling',
-                        type=str, default='index.docker.io/hystax')
+                        type=str, default='optscaleacr2026.azurecr.io/hystax')
     parser.add_argument('--dregistry_user',
                         help='Docker registry user for image pulling', type=str)
     parser.add_argument('--dregistry_password',
